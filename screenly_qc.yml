@@ -15,6 +15,21 @@ settings:
     optional: true
     help_text: Enable or disable Sentry and Google Analytics integrations.
     is_global: true
+  mode:
+    type: string
+    default_value: lobby
+    title: Mode
+    optional: true
+    help_text:
+      properties:
+        help_text: Choose the layout for where the screen is placed.
+        options:
+          - label: Lobby (logo and date header)
+            value: lobby
+          - label: Poster (message only)
+            value: poster
+        type: select
+      schema_version: 1
   override_locale:
     type: string
     default_value: en
