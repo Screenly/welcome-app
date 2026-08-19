@@ -1,7 +1,7 @@
 import { describe, test, expect, beforeEach, afterEach } from 'bun:test'
 import { setupScreenlyMock, resetScreenlyMock } from '@screenly/edge-apps/test'
 
-import init from './app'
+import init, { getHeadingSizeClass } from './app'
 
 describe('Welcome App', () => {
   beforeEach(() => {
@@ -56,5 +56,32 @@ describe('Welcome App', () => {
     expect(document.querySelector('#welcome-message')?.textContent).toBe(
       'to the team',
     )
+  })
+
+  test('steps a long heading down in size', () => {
+    setupScreenlyMock({}, { welcome_heading: 'Welcome to our headquarters' })
+    init()
+
+    const headingEl = document.querySelector('#welcome-heading')
+    expect(headingEl?.classList.contains('is-long')).toBe(true)
+  })
+})
+
+describe('getHeadingSizeClass', () => {
+  test('returns no class for a short heading', () => {
+    expect(getHeadingSizeClass('Welcome')).toBe('')
+  })
+
+  test('returns is-long past 16 characters', () => {
+    expect(getHeadingSizeClass('a'.repeat(17))).toBe('is-long')
+  })
+
+  test('returns is-very-long past 34 characters', () => {
+    expect(getHeadingSizeClass('a'.repeat(35))).toBe('is-very-long')
+  })
+
+  test('treats the thresholds as exclusive', () => {
+    expect(getHeadingSizeClass('a'.repeat(16))).toBe('')
+    expect(getHeadingSizeClass('a'.repeat(34))).toBe('is-long')
   })
 })
