@@ -1,4 +1,8 @@
+[![Version](https://img.shields.io/github/v/release/Screenly/welcome-app)](https://github.com/Screenly/welcome-app/releases/latest)
+
 # Welcome App
+
+![Welcome App Preview](/screenshots/1920x1080.webp)
 
 ## Getting Started
 
