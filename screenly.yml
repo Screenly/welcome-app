@@ -1,7 +1,7 @@
 ---
 syntax: manifest_v1
 description: Screenly Welcome App.
-icon: https://playground.srly.io/edge-apps/welcome-app/static/images/icon.svg
+icon: https://playground.srly.io/edge-apps/icons/welcome-app.svg
 author: Screenly, Inc.
 categories:
   - Messaging & Content
