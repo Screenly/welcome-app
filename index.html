@@ -13,13 +13,17 @@
       orientation="auto"
       padding="0"
     >
-      <div id="app">
-        <app-header class="header" show-date></app-header>
-        <main class="content">
+      <main class="welcome">
+        <header class="welcome-header">
+          <img class="welcome-logo is-hidden" data-logo alt="" />
+          <p class="welcome-time" data-time></p>
+        </header>
+        <section class="welcome-body">
+          <p class="welcome-eyebrow" data-eyebrow></p>
           <p id="welcome-heading" class="welcome-heading"></p>
           <p id="welcome-message" class="welcome-message"></p>
-        </main>
-      </div>
+        </section>
+      </main>
     </auto-scaler>
     <script type="module" src="/src/main.ts"></script>
   </body>
