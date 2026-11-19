@@ -43,6 +43,7 @@ The app accepts the following settings via `screenly.yml`:
 | Setting             | Description                                                                                                                                                   | Type     | Default        |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | -------------- |
 | `enable_analytics`  | Enable or disable Sentry and Google Analytics integrations                                                                                                    | optional | `true`         |
+| `mode`              | Layout for where the screen is placed: `lobby` (logo and date header) or `poster` (message only)                                                              | optional | `lobby`        |
 | `override_locale`   | Override the default locale with a supported language code (e.g., `en_US`, `fr_FR`, `de_DE`)                                                                  | optional | `en`           |
 | `override_timezone` | Override the default timezone with a supported timezone identifier (e.g., `Europe/London`, `America/New_York`). Defaults to the system timezone if left blank | optional | -              |
 | `tag_manager_id`    | Google Tag Manager container ID to enable tracking and analytics                                                                                              | optional | `GTM-P98SPZ9Z` |
